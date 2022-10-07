@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;abstract1.Object.java&apos; to &apos;Object1.java&apos;&#x0D;&#x0A;- Original project: &apos;CoreJavaPractice&apos;&#x0D;&#x0A;- Original element: &apos;abstract1.Object.java&apos;&#x0D;&#x0A;- Renamed element: &apos;abstract1.Object1.java&apos;" description="Rename compilation unit &apos;Object.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;abstract1{Object.java" name="Object1.java" references="false" stamp="1659258049355" version="1.0"/>
+</session>

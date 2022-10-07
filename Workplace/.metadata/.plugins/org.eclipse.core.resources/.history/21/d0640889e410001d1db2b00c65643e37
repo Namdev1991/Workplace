@@ -1,0 +1,25 @@
+package stringAssignment;
+
+public class Recurssionreverse {
+
+	String reverse(String str) {
+		if(str.isEmpty())  
+		{  
+		System.out.println("String is empty.");  
+		//if the above condition is true returns the same string      
+		return str;  
+		}   
+		else   
+		{  
+			return reverse(str.substring(1))+str.charAt(0); 	//
+		}
+		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Recurssionreverse x1=new Recurssionreverse();
+		System.out.println(x1.reverse("Namdev"));
+	
+
+	}
+
+}

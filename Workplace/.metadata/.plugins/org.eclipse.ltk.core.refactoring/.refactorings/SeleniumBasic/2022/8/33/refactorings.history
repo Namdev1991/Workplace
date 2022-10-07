@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;basicselenium.MethodsUsing&apos; to &apos;AssChrome&apos;&#x0D;&#x0A;- Original project: &apos;SeleniumBasic&apos;&#x0D;&#x0A;- Original element: &apos;basicselenium.MethodsUsing&apos;&#x0D;&#x0A;- Renamed element: &apos;basicselenium.AssChrome&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MethodsUsing&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;basicselenium{MethodsUsing.java[MethodsUsing" matchStrategy="1" name="AssChrome" qualified="false" references="true" similarDeclarations="false" stamp="1659969917313" textual="false" version="1.0"/>
+</session>

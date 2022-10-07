@@ -1,0 +1,32 @@
+package locator;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass1108ActiTime {
+
+	public static void main(String[] args) {
+		String str=System.getProperty("user.dir");
+		String path=str.concat("\\Executables\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", path);
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://demo.actitime.com/login.do");
+		
+		WebElement username=driver.findElement(By.name("username"));
+		System.out.println(username.isDisplayed());
+		System.out.println(username.isEnabled());
+		System.out.println(username.isSelected());
+		System.out.println(username.getAttribute("placeholder"));
+		
+		WebElement password=driver.findElement(By.name("pwd"));
+		System.out.println(password.isDisplayed());
+		System.out.println(password.isEnabled());
+		System.out.println(password.isSelected());
+		
+
+	}
+
+}

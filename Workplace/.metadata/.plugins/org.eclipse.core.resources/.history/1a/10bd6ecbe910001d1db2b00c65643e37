@@ -1,0 +1,14 @@
+package stringAssignment;
+import java.util.*;
+public class Reversestring {
+	
+	
+	public static void main(String[] args) {
+	System.out.println("Eneter the String");
+		Scanner ref=new Scanner(System.in);
+		String st=ref.next();
+		StringBuffer str=new StringBuffer(st);
+		System.out.println(str.reverse());	
+	}
+
+}

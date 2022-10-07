@@ -1,0 +1,25 @@
+package demo1;
+
+/**
+ * @author rahug
+ *@description This class Explains Commenting
+ */
+public class Practicevariable {
+
+	public static void main(String[] args) {
+		System.out.println("START OF PROGRAM");
+		byte b=24;
+		short s=-55;
+		int a=5;
+		long d=24;
+		double e=55555;
+		float f=34.43f;
+		char ch='A';
+		boolean flag=true;
+		
+		System.out.println(b);
+		System.out.println("START OF PROGRAM");
+		System.out.println("START OF PROGRAM");
+	}
+
+}

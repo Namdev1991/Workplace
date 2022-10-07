@@ -1,0 +1,18 @@
+package locator;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass_andMethods {
+
+	public static void main(String[] args) {
+		String str=System.getProperty("user.dir");
+		String path=str.concat("\\Executables\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", path);
+		
+		WebDriver cd=new ChromeDriver();
+		cd.get("https://opensource-demo.orangehrmlive.com/");
+
+	}
+
+}

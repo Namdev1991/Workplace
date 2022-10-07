@@ -1,0 +1,11 @@
+
+<suite name="Suite">
+<listeners>
+        <listener class-name="failedTestCaseRun.RetryListeners1"/>
+  </listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="extentReport.ExtentReport"/>
+    </classes>
+  </test>
+</suite> 

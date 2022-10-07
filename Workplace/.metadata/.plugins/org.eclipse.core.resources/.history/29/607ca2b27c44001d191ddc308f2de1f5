@@ -1,0 +1,37 @@
+package demo1;
+
+
+public class PracticeGlobalvariabl3 {
+	byte b;
+	short s;
+	int a;
+	long d;
+	double e;
+	float f;
+	char ch;
+	boolean flag;
+
+	public static void main(String[] args) {
+		System.out.println("START OF PROGRAM");
+//		byte b=24;
+//		short s=-55;
+//		int a=5;
+//		long d=24;
+//		double e=55555d;
+//		float f=34.43f;
+//		char ch='A';
+//		boolean flag=true;
+		PracticeGlobalvariabl3 obj1=new PracticeGlobalvariabl3();
+
+		System.out.println("byte="+obj1.b);
+		System.out.println("short s="+obj1.s);
+		System.out.println("int a="+obj1.a);
+		System.out.println("long d="+obj1.d);
+		System.out.println("double e="+obj1.e);
+		System.out.println("float f="+obj1.f);
+		System.out.println("character ch="+obj1.ch);
+		System.out.println("boolean flag="+obj1.flag);
+		System.out.println("END OF PROGRAM");
+	}
+
+}

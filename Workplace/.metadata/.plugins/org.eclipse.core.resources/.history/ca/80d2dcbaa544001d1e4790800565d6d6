@@ -1,0 +1,29 @@
+package javaScriptExecutor;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import utility.SeleniumUtility;
+
+public class Jspractice extends SeleniumUtility{
+	WebDriver driver;
+	
+  @Test
+  public void Login() {
+  driver= setUp("Chrome","https://opensource-demo.orangehrmlive.com/");
+  	JavascriptExecutor js=(JavascriptExecutor)driver;
+  WebElement username=driver.findElement(By.xpath("//input[@class=\"oxd-input oxd-input--active\" and @name=\"username\"]"));
+//  	js.executeScript("document.getElementsByClassName('oxd-input oxd-input--active')[0].click()");
+//  	js.executeScript("document.getElementsByClassName('oxd-input oxd-input--active')[0].value='admin'");
+//  	js.executeScript("document.getElementsByName('password')[0].click()");
+//  	js.executeScript("document.getElementsByName('password')[0].value='admin123'");
+//  	js.executeScript("documents.getElementsVyClassName('oxd-button oxd-button--medium oxd-button--main orangehrm-login-button')[0].click()");
+ 
+  	js.executeScript("arguments[0].value='admin';",username);
+  
+  
+  }
+}

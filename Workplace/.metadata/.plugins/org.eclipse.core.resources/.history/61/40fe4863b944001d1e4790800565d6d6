@@ -1,0 +1,24 @@
+package brokenLink;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import utility.SeleniumUtility;
+
+public class MultiBrokenLink extends SeleniumUtility {
+	WebDriver driver;
+  @Test
+  public void LinkValidations() {
+  driver=setUp("Chrome", "https://demoqa.com/broken");
+  List<WebElement> listoflink=driver.findElements(By.tagName("a"));
+  System.out.println("Size of List = "+listoflink.size());
+	  
+	  
+	  
+  
+  }
+}

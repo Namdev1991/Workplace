@@ -1,0 +1,20 @@
+package org.variablePractice;
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		System.out.println("Program Starts");
+		byte a=10;
+		short b=20;
+		int c=99;
+		long d=45;
+		double f=44.43;
+		char ch='A';
+		float y2=70.01f;
+		long k1=847;
+		long k2=7719960299l;
+		System.out.println("Adition of A&B = "+(b+a));
+		System.out.println("print value of B="+b);
+		System.out.println("Program Ends");
+	}
+}

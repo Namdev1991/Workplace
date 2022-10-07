@@ -1,0 +1,32 @@
+package demo1;
+
+/**
+ * @author rahug
+ *@description This class Explains Commenting
+ */
+public class Practicevariable {
+
+	public static void main(String[] args) {
+		System.out.println("START OF PROGRAM");
+		byte b=24;
+		short s=-55;
+		int a=5;
+		long d=24;
+		double e=55555d;
+		float f=34.43f;
+		char ch='A';
+		boolean flag=true;
+
+		System.out.print(b);
+		System.out.println("sum of"+a+"sum of"+b+"is"+(a+b));
+		System.out.println("short s="+s);
+		System.out.println("int a="+a);
+		System.out.println("long d="+d);
+		System.out.println("double e="+e);
+		System.out.println("float f="+f);
+		System.out.println("character ch="+ch);
+		System.out.println("boolean flag="+flag);
+		System.out.println("END OF PROGRAM");
+	}
+
+}

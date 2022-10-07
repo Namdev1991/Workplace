@@ -1,0 +1,46 @@
+package locator;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass_andMethods {
+
+	public static void main(String[] args) throws InterruptedException {
+		String str=System.getProperty("user.dir");
+		String path=str.concat("\\Executables\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", path);
+		
+		WebDriver cd=new ChromeDriver();
+		cd.get("https://opensource-demo.orangehrmlive.com/");
+		cd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement username=cd.findElement(By.id("txtUsername"));
+		System.out.println("Username displayed= "+username.isDisplayed());
+		System.out.println("Username Enabled= "+username.isEnabled());
+		System.out.println("Username Selected= "+username.isSelected());
+		username.sendKeys("Admin");
+		
+		WebElement password=cd.findElement(By.id("txtPassword"));
+		System.out.println("Password displayed= "+password.isDisplayed());
+		System.out.println("Password enabled = "+password.isEnabled());
+		System.out.println("Password Selected = "+password.isSelected());
+		password.sendKeys("admin123");
+		
+		cd.findElement(By.id("btnLogin")).click();
+		
+		
+		Thread.sleep(10000);
+		String title=cd.getTitle();
+		System.out.println(title);
+		WebElement fp=cd.findElement(By.tagName("a"));
+		String text=fp.getText();
+		System.out.println(text);
+		System.out.println("Text Validation = "+text.equals("Forgot your password?"));
+		
+		cd.close();
+	}
+
+}

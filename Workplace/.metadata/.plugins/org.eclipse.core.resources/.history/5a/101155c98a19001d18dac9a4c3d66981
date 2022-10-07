@@ -1,0 +1,34 @@
+package locator;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass_andMethods {
+
+	public static void main(String[] args) {
+		String str=System.getProperty("user.dir");
+		String path=str.concat("\\Executables\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", path);
+		
+		WebDriver cd=new ChromeDriver();
+		cd.get("https://opensource-demo.orangehrmlive.com/");
+		WebElement username=cd.findElement(By.id("txtUsername"));
+		System.out.println(username.isDisplayed());
+		System.out.println(username.isEnabled());
+		System.out.println(username.isSelected());
+		username.sendKeys("Admin");
+		
+		WebElement password=cd.findElement(By.id("txtPassword"));
+		System.out.println(password.isDisplayed());
+		System.out.println(password.isEnabled());
+		System.out.println(password.isSelected());
+		password.sendKeys("admin123");
+		
+		WebElement login=cd.findElement(By.id("divLoginButton"));
+		login.click();
+
+	}
+
+}

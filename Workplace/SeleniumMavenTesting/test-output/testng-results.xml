@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="46119" started-at="2022-10-05T14:42:09Z" finished-at="2022-10-05T14:42:55Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="46119" started-at="2022-10-05T14:42:09Z" finished-at="2022-10-05T14:42:55Z">
+      <class name="brokenLink.MultiBrokenLink">
+        <test-method status="PASS" signature="LinkValidations()[pri:0, instance:brokenLink.MultiBrokenLink@3ba9ad43]" name="LinkValidations" duration-ms="46095" started-at="2022-10-05T14:42:09Z" finished-at="2022-10-05T14:42:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LinkValidations -->
+      </class> <!-- brokenLink.MultiBrokenLink -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

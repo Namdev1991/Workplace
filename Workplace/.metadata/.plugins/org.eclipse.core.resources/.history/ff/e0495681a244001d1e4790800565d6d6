@@ -1,0 +1,9 @@
+package javaScriptExecutor;
+
+import org.testng.annotations.Test;
+
+public class Jspractice {
+  @Test
+  public void f() {
+  }
+}

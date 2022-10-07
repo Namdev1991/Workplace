@@ -1,0 +1,19 @@
+Feature: Task Create and Delete
+Background:
+Given Browser is launch with correct Url
+    When User Login with Valid creadentials
+    Then User Should be on Home Page
+    When User click on TaskButton 
+    Then It should be on TaskPage
+    
+  Scenario: Create Task
+    When user create a task
+    Then Task should be created
+    And close browser
+
+ 
+  Scenario: Delete Task
+    When user Dalete task
+    Then Task should be Delete
+    And close Browser
+    

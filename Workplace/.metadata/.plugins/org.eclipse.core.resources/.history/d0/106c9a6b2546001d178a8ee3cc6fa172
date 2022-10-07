@@ -1,0 +1,22 @@
+package staticNonstaticPractice;
+
+public class Ex3 {
+	public int a = 10, b = 30;// non static Global Variable
+	public static int x = 50, y = 60; // static Global Variable
+
+	public static void main(String[] args) {
+
+		System.out.println("Start of Program");
+
+		System.out.println("End of Program");
+	}
+
+	public void test1() {
+		System.out.println("Hello");
+		System.out.println("Good Evening");
+		System.out.println("How are you");
+		return; // By Default Hidden
+
+	}
+
+}

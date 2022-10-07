@@ -1,0 +1,21 @@
+
+<suite name="Suite" Parallel="methods" thread-count="2">
+	<test name="Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="username" value="Admin"></parameter>
+		<parameter name="pwd" value="admin123"></parameter>
+		<classes>
+			<class name="grouping_parameterisation.CrossBrowsing_Parallel">
+			</class>
+		</classes>
+	</test>
+	<test name="firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="username" value="Admin"></parameter>
+		<parameter name="pwd" value="admin123"></parameter>
+		<classes>
+			<class name="grouping_parameterisation.CrossBrowsing_Parallel">
+			</class>
+		</classes>
+	</test>
+</suite> 

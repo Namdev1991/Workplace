@@ -1,0 +1,16 @@
+package org.variablePractice;
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		System.out.println("Program Starts");
+		byte a=10;
+		short b=20;
+		int c=99;
+		long d=45;
+		double f=44.43;
+		char ch='A';
+		System.out.println("Program Ends");
+	
+	}
+}

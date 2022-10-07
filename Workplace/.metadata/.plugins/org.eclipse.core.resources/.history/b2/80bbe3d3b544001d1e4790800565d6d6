@@ -1,0 +1,9 @@
+package brokenLink;
+
+import org.testng.annotations.Test;
+
+public class MultiBrokenLink {
+  @Test
+  public void f() {
+  }
+}

@@ -1,0 +1,12 @@
+
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="browser" value="Chrome"></parameter>
+  <parameter name="url" value="https://demo.vtiger.com/vtigercrm/index.php"></parameter>
+  <parameter name="username" value="admin"></parameter>
+  <parameter name="pwd" value="Test@123"></parameter>
+  <classes>
+  <class name="grouping_parameterisation.Parameterization"></class>
+  </classes>
+  </test> 
+</suite>

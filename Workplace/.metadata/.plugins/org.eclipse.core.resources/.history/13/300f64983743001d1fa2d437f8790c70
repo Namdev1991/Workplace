@@ -1,0 +1,50 @@
+package webPages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class TaskPage {
+	WebDriver driver;
+	
+	public TaskPage(WebDriver driver) {
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(css=".addNewButton>div:nth-child(3)")
+	private WebElement addButton;
+	
+	@FindBy(css=".item.createNewTasks")
+	private WebElement newtask;
+	
+	@FindBy(css=".customerSelector> div>div>div:nth-child(3)")
+	private WebElement dropdown;
+	
+	@FindBy(css=".customerSelector .searchItemList>div:nth-child(3)")
+	private WebElement selectcustomer;
+	
+	@FindBy(css=".selectProjectRow .comboboxButton>div:nth-child(3)")
+	private WebElement projectdropdown;
+	
+	@FindBy(css=".projectSelector .searchItemList>div:nth-child(4)")
+	private WebElement selectproject;
+	
+	@FindBy(xpath="//input[@class=\"inputFieldWithPlaceholder\" and @placeholder=\"Enter task name\"]")
+	private WebElement taskname;
+	
+	@FindBy(xpath="//div[text()='Create Tasks']")
+	private WebElement createtaskbutton;
+	
+	@FindBy(css=".tasksTable .selection>div")
+	private WebElement checkbox;
+	
+	@FindBy(css=".delete.button")
+	private WebElement delete;
+	
+	@FindBy(css=".buttonIcon .submitTitle.buttonTitle")
+	private WebElement submitdelete;
+	
+	
+}

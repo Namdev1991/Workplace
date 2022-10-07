@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/QAAutomation-lab/13thMay_2022/tree/master/SamplePageObjectActitime/src"/>
+		<item value="https://github.com/QAAutomation-lab/13thMay_2022"/>
+		<item value="https://github.com/QAAutomation-lab/13thMay_2022/tree/master/SamplePageObjectActitime"/>
+		<item value="https://github.com/QAAutomation-lab/13thMay_2022/tree/master/MavenTestMay2022"/>
+		<item value="https://github.com/QAAutomation-lab/13thMay_2022/tree/master/MavenTestMay2022/src/main/java/utilities"/>
+		<item value="https://github.com/sammyBagul77/seleniumPractice"/>
+	</list>
+	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+</section>

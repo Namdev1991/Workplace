@@ -1,0 +1,12 @@
+package stringAssignment;
+
+public class Reversestring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuffer str=new StringBuffer("Namdev");
+		System.out.println(str.reverse());
+		
+	}
+
+}

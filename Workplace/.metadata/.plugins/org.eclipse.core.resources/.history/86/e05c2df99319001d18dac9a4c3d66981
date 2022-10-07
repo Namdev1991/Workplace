@@ -1,0 +1,46 @@
+package locator;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass1108ActiTime {
+
+	public static void main(String[] args) throws InterruptedException {
+		String str=System.getProperty("user.dir");
+		String path=str.concat("\\Executables\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", path);
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://demo.actitime.com/login.do");
+		
+		WebElement username=driver.findElement(By.name("username"));
+		System.out.println(username.isDisplayed());
+		System.out.println(username.isEnabled());
+		System.out.println(username.isSelected());
+		System.out.println(username.getAttribute("placeholder"));
+		
+		WebElement password=driver.findElement(By.name("pwd"));
+		System.out.println(password.isDisplayed());
+		System.out.println(password.isEnabled());
+		System.out.println(password.isSelected());
+		System.out.println(password.getAttribute("type"));
+		
+		//driver.findElement(By.id("loginButton")).click();
+		WebElement keep=driver.findElement(By.id("keepLoggedInLabel"));
+		System.out.println(keep.isSelected());
+		System.out.println(keep.isDisplayed());
+		System.out.println(keep.isEnabled());
+		String keeplogin=keep.getText();
+		System.out.println(keeplogin);
+		
+		driver.findElement(By.name("username")).sendKeys("admin");
+		driver.findElement(By.name("pwd"));
+		driver.findElement(By.id("loginButton")).click();
+		Thread.sleep(10000);
+		
+		
+	}
+
+}

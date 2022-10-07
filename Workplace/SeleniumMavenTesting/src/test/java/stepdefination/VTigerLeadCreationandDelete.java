@@ -1,0 +1,115 @@
+package stepdefination;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import utility.SeleniumUtility;
+import webPages.ContactCreateandDeletepage;
+import webPages.HomePageVtiger;
+import webPages.LeadCreationPage;
+import webPages.LoginPageofVtiger;
+
+public class VTigerLeadCreationandDelete extends SeleniumUtility {
+	//Login Steps
+	
+	WebDriver driver;
+	LoginPageofVtiger lpage;
+	HomePageVtiger hpage;
+	LeadCreationPage leadpage;
+	ContactCreateandDeletepage cpage;
+	@Given("^Browser is launch$")
+	public void Browser_is_launch() {
+		driver=setUp("Chrome","https://demo.vtiger.com/vtigercrm/index.php");
+	}
+	
+//	@Given("^Browser is launch with correct Url$")
+//	public void Browser_is_launch_with_correct_Url() {
+//		driver=setUp("chrome","https://demo.vtiger.com/vtigercrm/index.php");
+//	}
+	
+	@When("^Enter (.+)and Enter(.+) and click on LoginButton$")
+	public void Login(String un,String pw) {
+		LoginPageofVtiger page=new LoginPageofVtiger(driver);
+		page.Login(un, pw);
+	}
+	@When("^User login successfully with Valid Data$")
+	public void Single_Login() {
+		LoginPageofVtiger page=new LoginPageofVtiger(driver);
+		page.Login("admin", "Test@123");
+	}
+	@And("^User Should be on home page$")
+	public void Verify() {
+		Assert.assertTrue(driver.getTitle().contains("Dashboard"));
+	}
+	
+	//Lead Creation 
+	
+	@And("^user Navigate to Lead Page$")
+	public void navigate_Lead_Page() {
+		hpage=new HomePageVtiger(driver);
+		hpage.navigatetoleadpage();
+	}
+	@And("^I click on Add lead button and Enter Firstname As(.+) lastname As(.+) and Phone no(.+) and click on Save button$")
+	public void LeadCreation(String firstname,String lastname,String phoneno) throws InterruptedException{
+		leadpage=new LeadCreationPage(driver);
+		leadpage.Leadcreation(firstname, lastname, phoneno);	
+	}
+	@Then("^Lead Should be Created$")
+	public void Validation() throws InterruptedException {
+		Assert.assertTrue(leadpage.validation());
+		Thread.sleep(5000);
+	}
+	@When("^I click on Delete checkbox and delete link and confirm delete$")
+	public void i_click_on_delete_checkbox_and_delete_link_and_confirm_delete() {
+	   leadpage.leadDelete();
+	}
+//	@Then("^Verify deleted all leads$")
+//	public void verification() {
+//		Assert.assertEquals(leadpage.deletevalidation(), "emptyRecordsDiv");
+	//}
+	@And("^close the Browser$")
+	public void close() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.close();
+	}
+
+
+		//   Contact Creation Steps 
+
+	@When("^User navigate to contact creation page$")
+			public void navigate_to_Contact_Creation() {
+				hpage.navigatetocontactpage();
+			}
+	@And("^I click on Add lead button of contact page and Enter Firstname As<Firstname> lastname As<Lastname> and Phone no<Phoneno> and click on Save button$")
+	public void contact_Creation(String Nname,String Lname,String mobno ) throws IOException {
+		cpage=new ContactCreateandDeletepage(driver);
+		cpage.createcontact(Nname,Lname,mobno);
+	}
+	@Then("^Contact should be created$")
+	public void Contact_Validation() {
+		Assert.assertEquals(driver.getTitle(), "");   //---> Page Title Addition 
+	}
+
+      //---------> Contact delete steps
+	@And("^Navigate to contacts and Select checkbox of created contact and Delete the Contact$")
+	public void Contact_Delete() {
+		cpage.deleteContact();
+	}
+	@Then("^contact should be deleted$")
+	public void Contact_delete_Varification() {
+		
+	}
+
+}
+
+
+
+
+
+
